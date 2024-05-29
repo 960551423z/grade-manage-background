@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.score.mapper.CoursesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.score.model.domain.Courses">
+            <id property="courseID" column="CourseID" jdbcType="INTEGER"/>
+            <result property="courseName" column="CourseName" jdbcType="VARCHAR"/>
+            <result property="instructor" column="Instructor" jdbcType="VARCHAR"/>
+            <result property="credits" column="Credits" jdbcType="INTEGER"/>
+            <result property="semester" column="Semester" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        CourseID,CourseName,Instructor,
+        Credits,Semester,createTime,
+        updateTime,isDelete
+    </sql>
+</mapper>
